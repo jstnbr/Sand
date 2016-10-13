@@ -2,9 +2,7 @@
 
 Portable Vagrant LEMP stack
 
-> A zero-configuration PHP development environment with Laravel optional.
-
-Just run `vagrant up` and view your site at `http://localhost:8800`.
+> A zero-configuration PHP development environment.
 
 ## What's in the Box?
 
@@ -21,12 +19,12 @@ Just run `vagrant up` and view your site at `http://localhost:8800`.
 ### Features
 
 - Laravel ready
-- Less than half size of Laravel Homestead
+- Less than half the size of Laravel Homestead
 - Works offline
 
 ## Usage
 
-Clone the repository and run:
+Clone the repository and run
 
 ```
 vagrant up
@@ -36,9 +34,10 @@ The `public` folder is now being hosted on `http://localhost:8800`.
 
 ### Laravel
 
-Sand ships ready for Laravel optional usage. To create a fresh Laravel installation SSH into Vagrant and run:
+To create a fresh Laravel installation run
 
 ```
+vagrant ssh
 cd /var/www
 laravel new laravel
 ```
@@ -47,11 +46,14 @@ View your Laravel site at `http://localhost:8801`.
 
 #### Existing Laravel Projects
 
-Clone or copy into the Sand directory as `laravel`. Match your `.env` database credentials to Sand, and then run `composer install` and `php artisan migrate`.
+Clone or copy your project into the Sand directory as `laravel`. Edit your `.env` to match Sand database credentials.
 
-## Access
+```
+composer install
+php artisan migrate
+```
 
-### MySQL Database
+## Database Access
 
 - Database: sand
 - Username: root
@@ -70,7 +72,7 @@ $connect = mysqli_connect('localhost', 'root', 'root', 'sand');
 - Username: vagrant
 - Password: vagrant
 
-Port for hostname may vary.
+Hostname port may vary.
 
 ## Vagrant Commands
 
