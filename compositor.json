@@ -1,0 +1,80 @@
+{
+  "name": "jstnbr/Sand",
+  "version": "0.1.4",
+  "libraries": {
+    "xv": "^1.1.25"
+  },
+  "title": "Sand",
+  "branch": "master",
+  "style": {
+    "name": "Williamsburg",
+    "componentSet": {
+      "nav": "nav/BasicNav",
+      "header": "header/LightBannerHeader",
+      "article": "article/ReaderArticle",
+      "footer": "footer/BasicFooter"
+    },
+    "fontFamily": "Montserrat, sans-serif",
+    "heading": {
+      "fontWeight": 600,
+      "letterSpacing": "0.1em"
+    },
+    "colors": {
+      "text": "#346",
+      "background": "#fff",
+      "primary": "#0099e0",
+      "secondary": "#ab61ff",
+      "highlight": "#f7b",
+      "muted": "#fffab3",
+      "border": "#ccd"
+    }
+  },
+  "content": [
+    {
+      "component": "nav",
+      "links": [
+        {
+          "href": "https://github.com/jstnbr/Sand",
+          "text": "GitHub"
+        }
+      ]
+    },
+    {
+      "component": "header",
+      "heading": "Sand",
+      "subhead": "Portable Vagrant LEMP stack",
+      "children": [
+        {
+          "component": "ui/TweetButton",
+          "text": "Sand: Portable Vagrant LEMP stack",
+          "url": ""
+        },
+        {
+          "component": "ui/GithubButton",
+          "user": "jstnbr",
+          "repo": "Sand"
+        }
+      ]
+    },
+    {
+      "component": "article",
+      "metadata": {
+        "source": "github.readme"
+      },
+      "html": "\n\n<blockquote>\n<p>A zero-configuration PHP development environment.</p>\n</blockquote>\n<h2>What&apos;s in the Box?</h2>\n<ul>\n<li>Debian 8.6</li>\n<li>PHP 7</li>\n<li>MySQL</li>\n<li>Vim</li>\n<li>Git</li>\n<li>Curl</li>\n<li>Nginx</li>\n<li>Composer</li>\n<li>Mcrypt</li>\n</ul>\n<h3>Features</h3>\n<ul>\n<li>Laravel ready</li>\n<li>Less than half the size of Laravel Homestead</li>\n<li>Works offline</li>\n</ul>\n<h2>Usage</h2>\n<p>Clone the repository and run</p>\n<pre><span class=\"hljs-attribute\">vagrant up</span></pre><p>The <code>public</code> folder is now being hosted on <code>http://localhost:8800</code>.</p>\n<h3>Laravel</h3>\n<p>To create a fresh Laravel installation run</p>\n<pre>vagrant ssh\ncd /<span class=\"hljs-keyword\">var</span>/www\nlaravel <span class=\"hljs-keyword\">new</span> laravel</pre><p>View your Laravel site at <code>http://localhost:8801</code>.</p>\n<h4>Existing Laravel Projects</h4>\n<p>Clone or copy your project into the Sand directory as <code>laravel</code>. Edit your <code>.env</code> to match Sand database credentials.</p>\n<pre>composer <span class=\"hljs-keyword\">install</span>\nphp artisan migrate</pre><h2>Database Access</h2>\n<ul>\n<li>Database: sand</li>\n<li>Username: root</li>\n<li>Password: root</li>\n<li>Hostname: localhost</li>\n</ul>\n<p>Connect to the database with PHP:</p>\n<pre>$connect = mysqli_connect(<span class=\"hljs-string\">&apos;localhost&apos;</span>, <span class=\"hljs-string\">&apos;root&apos;</span>, <span class=\"hljs-string\">&apos;root&apos;</span>, <span class=\"hljs-string\">&apos;sand&apos;</span>);</pre><h3>SSH</h3>\n<ul>\n<li>Hostname: 127.0.0.1:2222</li>\n<li>Username: vagrant</li>\n<li>Password: vagrant</li>\n</ul>\n<p>Hostname port may vary.</p>\n<h2>Vagrant Commands</h2>\n<h4>Start or resume</h4>\n<pre><span class=\"hljs-attribute\">vagrant up</span></pre><h4>Pause</h4>\n<pre>vagrant <span class=\"hljs-built_in\">suspend</span></pre><h4>Delete</h4>\n<pre><span class=\"hljs-attribute\">vagrant destroy</span></pre><h4>SSH</h4>\n<pre><span class=\"hljs-attribute\">vagrant ssh</span></pre><h2>License</h2>\n<p><a href=\"http://opensource.org/licenses/MIT\">MIT License</a></p>\n"
+    },
+    {
+      "component": "footer",
+      "links": [
+        {
+          "href": "https://github.com/jstnbr/Sand",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://github.com/jstnbr",
+          "text": "jstnbr"
+        }
+      ]
+    }
+  ]
+}
